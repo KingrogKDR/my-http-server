@@ -50,11 +50,12 @@ func getContentType(filename string) string {
 }
 
 func main() {
-	fmt.Println("Logs from your program will appear here!")
 
     listener, err := net.Listen("tcp", "0.0.0.0:4221")
-
-	if err != nil {
+    
+    fmt.Println("Server is running at port 4221:")
+	
+    if err != nil {
         fmt.Println("Failed to bind to port 4221:", err)
 	 	os.Exit(1)
 	}
